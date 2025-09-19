@@ -415,24 +415,26 @@ Funds donated via Patreon go directly to support Evan You's full-time work on Vu
 <h2 align="center">Generous Backers via Patreon ($50+)</h2>
 
 <!--50 start-->
+
 - Yoshitaka M
 - Peter Imburg
 - Sean Ferguson
 - Johnny Ray Austin
-- errorrik 
+- errorrik
 - Wasim Khamlichi
 <!--50 end-->
 
 <h2 align="center">Backers via Patreon</h2>
 
 <!--10 start-->
+
 - Sara McVey
 - Keisuke Kita
 - Alex Riviere
 - Thomas Sittig
 - WhereJuly
-- Fontis 
-- Jack 
+- Fontis
+- Jack
 - Nick Carr
 - Artur Bańka
 - Traversy Media
@@ -440,16 +442,16 @@ Funds donated via Patreon go directly to support Evan You's full-time work on Vu
 - Donghai Gai
 - Aleksander Figiel
 - Faizal Andyka
-- wickedwei 
+- wickedwei
 - Sunny Yuen
-- Jules 
+- Jules
 - Zeth Odderskov
 - Santi Sanchez Canals
 - Thomas Wiedemann
 - Nobuhide Esaki
 - Roy Segall
 - Allan McKernan
-- 琚致远 
+- 琚致远
 - Diana Bergholz
 - Riki Fridrich
 - Alfonso Herrera
@@ -457,7 +459,7 @@ Funds donated via Patreon go directly to support Evan You's full-time work on Vu
 - username
 - Pierre Lebrun
 - Peter Matkovsky
-- 龙腾道 
+- 龙腾道
 - Nick Dandakis
 - Yusuke Kawabata
 - Shawn Wildermuth
@@ -474,12 +476,12 @@ Funds donated via Patreon go directly to support Evan You's full-time work on Vu
 - Wakana Seki
 - Jere Sjöroos
 - Donald Fischer
-- Eric 
+- Eric
 - tyler madsen
 - Joe Gregory
 - Masahiro Tanaka
-- Tyler 
-- IMGNRY 
+- Tyler
+- IMGNRY
 - Jim Raden
 - Haim Yulzari
 - Anthony Estebe
@@ -487,7 +489,7 @@ Funds donated via Patreon go directly to support Evan You's full-time work on Vu
 - Jon Hobbs-Smith
 - Pierre Vanhulst
 - Zoran Knezevic
-- Luiz 
+- Luiz
 - Bernhard E. Reiter
 - Guy Gavergun
 - Matt Jones

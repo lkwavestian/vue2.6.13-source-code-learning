@@ -41,7 +41,9 @@
     "release": "bash scripts/release.sh",
     "release:weex": "bash scripts/release-weex.sh",
     "release:note": "node scripts/gen-release-note.js",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "format": "prettier --write \"src/**/*.{js,ts,vue,json,md}\" \"examples/**/*.{html,js}\" \"test/**/*.{js,ts}\" \"scripts/**/*.js\" \"*.{js,json,md}\"",
+    "format:check": "prettier --check \"src/**/*.{js,ts,vue,json,md}\" \"examples/**/*.{html,js}\" \"test/**/*.{js,ts}\" \"scripts/**/*.js\" \"*.{js,json,md}\""
   },
   "gitHooks": {
     "pre-commit": "lint-staged",
@@ -74,6 +76,7 @@
     "@babel/plugin-transform-flow-strip-types": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/register": "^7.0.0",
+    "@fe-qianxun/prettier": "^1.0.1",
     "@types/node": "^12.12.0",
     "@types/webpack": "^4.4.22",
     "acorn": "^5.2.1",
@@ -146,5 +149,9 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "prettier": "@fe-qianxun/prettier",
+  "dependencies": {
+    "prettier": "^3.6.2"
   }
 }
