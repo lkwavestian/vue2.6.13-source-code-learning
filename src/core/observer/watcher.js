@@ -23,6 +23,8 @@ let uid = 0;
  * A watcher parses an expression, collects dependencies,
  * and fires callback when the expression value changes.
  * This is used for both the $watch() api and directives.
+ * 一个watcher可以解析一个表达式，收集依赖，并在表达式值变化时触发回调
+ * 用于$watch() api 和指令
  */
 export default class Watcher {
   vm: Component;
@@ -69,9 +71,9 @@ export default class Watcher {
     this.id = ++uid; // uid for batching
     this.active = true;
     this.dirty = this.lazy; // for lazy watchers
-    this.deps = [];
+    this.deps = []; // Watcher 实例持有的Dep实例数组
     this.newDeps = [];
-    this.depIds = new Set();
+    this.depIds = new Set(); // Watcher 实例持有的Dep实例id集合
     this.newDepIds = new Set();
     this.expression = process.env.NODE_ENV !== "production" ? expOrFn.toString() : "";
     // parse expression for getter
@@ -95,7 +97,10 @@ export default class Watcher {
 
   /**
    * Evaluate the getter, and re-collect dependencies.
+   *
    */
+
+  /* 当实例化一个watcher时，会首先调用get方法 */
   get() {
     pushTarget(this);
     let value;

@@ -139,20 +139,25 @@ export function defineReactive(
   customSetter?: ?Function,
   shallow?: boolean
 ) {
-  const dep = new Dep();
+  const dep = new Dep(); // 初始化 dep 对象
 
-  const property = Object.getOwnPropertyDescriptor(obj, key);
+  const property = Object.getOwnPropertyDescriptor(obj, key); // 获取obj的属性描述符
   if (property && property.configurable === false) {
     return;
   }
 
   // cater for pre-defined getter/setters
-  const getter = property && property.get;
-  const setter = property && property.set;
+  const getter = property && property.get; // 获取obj的getter
+  const setter = property && property.set; // 获取obj的setter
+
+  // 如果obj的getter或setter存在，并且arguments的长度为2（即参数obj和key存在）
+  // 则将val赋值为obj的key
   if ((!getter || setter) && arguments.length === 2) {
     val = obj[key];
   }
 
+  // 如果shallow为false，对obj[key]进行递归observe，
+  // 保证无论obj的层级有多深，它的所有子属性都能变成响应式对象
   let childOb = !shallow && observe(val);
   Object.defineProperty(obj, key, {
     enumerable: true,
