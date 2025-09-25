@@ -207,6 +207,7 @@ export function mountComponent(vm: Component, el: ?Element, hydrating?: boolean)
 
   // manually mounted instance, call mounted on self
   // mounted is called for render-created child components in its inserted hook
+  // vm.$vnode 表示 Vue 实例的父虚拟 Node，所以它为 null 则表示当前是根 Vue 的实例
   if (vm.$vnode == null) {
     vm._isMounted = true;
     callHook(vm, "mounted");

@@ -107,6 +107,7 @@ export function createPatchFunction(backend) {
 
   let creatingElmInVPre = 0;
 
+  /* 通过虚拟节点创建真实的 DOM 并插入到它的父节点中 */
   function createElm(vnode, insertedVnodeQueue, parentElm, refElm, nested, ownerArray, index) {
     if (isDef(vnode.elm) && isDef(ownerArray)) {
       // This vnode was used in a previous render!
@@ -692,6 +693,14 @@ export function createPatchFunction(backend) {
     }
   }
 
+  /*
+    patch 函数是 Vue 的核心函数，用于比较新旧 VNode 并更新 DOM。
+    它接受四个参数：
+    - oldVnode: 旧的 VNode 或 DOM 节点
+    - vnode: 新的 VNode，即执行_render后得到的VNode
+    - hydrating: 是否服务端渲染
+    - removeOnly: 给 transition=group 使用
+  */
   return function patch(oldVnode, vnode, hydrating, removeOnly) {
     if (isUndef(vnode)) {
       if (isDef(oldVnode)) invokeDestroyHook(oldVnode);

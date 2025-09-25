@@ -19,6 +19,7 @@ Vue.prototype.$mount = function (el?: string | Element, hydrating?: boolean): Co
   el = el && query(el);
 
   /* istanbul ignore if */
+  /* Vue 不能挂载在 body 或者 html 这样的根节点上 */
   if (el === document.body || el === document.documentElement) {
     process.env.NODE_ENV !== "production" &&
       warn(`Do not mount Vue to <html> or <body> - mount to normal elements instead.`);
@@ -27,6 +28,7 @@ Vue.prototype.$mount = function (el?: string | Element, hydrating?: boolean): Co
 
   const options = this.$options;
   // resolve template/el and convert to render function
+  /* 如果 options.render 不存在，则需要将 template 或者 el 转换为 render 函数 */
   if (!options.render) {
     let template = options.template;
     if (template) {

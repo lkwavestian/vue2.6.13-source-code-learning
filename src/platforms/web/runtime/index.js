@@ -35,6 +35,7 @@ Vue.prototype.__patch__ = inBrowser ? patch : noop;
 
 // public mount method
 Vue.prototype.$mount = function (el?: string | Element, hydrating?: boolean): Component {
+  /* 如果 在浏览器环境下，并且 el 是字符串，则调用 query 转化为元素 */
   el = el && inBrowser ? query(el) : undefined;
   return mountComponent(this, el, hydrating);
 };
